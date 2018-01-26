@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>DOTA</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://captain.whu.edu.cn/DOTAweb/css/mystyle.css"
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+        body {
+               background-color : rgb(250,250,250); /*UCLA bgcolor*/
+        }
+    </style>	
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="span12">
+				<div class="hero-unit">
+					<h1 style="text-align:center; margin-top:60px; font-weight: bold">
+						DOTA: A Large-scale Dataset for Object Detection in Aerial Images
+					</h1>
+					<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px">
+						<a href="http://captain.whu.edu.cn/xia_En.html">Gui-Song Xia</a>,
+						<a href="http://mclab.eic.hust.edu.cn/~xbai/">Xiang Bai</a>, 
+						<a href="http://captain.whu.edu.cn/dingjian.html">Jian Ding</a>, 
+						<a href="">Zhen Zhu</a>, 
+						<a href="http://vision.cornell.edu/se3/people/serge-belongie/">Serge Belongie</a>, <br>
+						<a href="http://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>, 
+						<a href="http://www.dlr.de/caf/en/desktopdefault.aspx/tabid-5242/8788_read-933/sortby-lastname/">Mihai Datcu</a>, 
+						<a href="http://www.dsi.unive.it/~pelillo/">Marcello Pelillo</a>, 
+						<a href="http://www.lmars.whu.edu.cn/prof_web/zhangliangpei/rs/xueshu.htm">Liangpei Zhang</a>. 
+					</p>
+				</div>				
+
+				<div class="row">
+					<!-- <div class="span4">
+					</div> -->
+					<div class="span6 offset2">
+						<ul class="nav nav-tabs">
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/index.html">Home</a>
+							</li>
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/dataset.html">Dataset</a>
+							</li>
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/tasks.html">Tasks</a>
+							</li>
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/evaluation.html">Evaluation</a>
+							</li>
+							
+							<li class="active">
+								<a href="http://captain.whu.edu.cn/DOTAweb/results.html">Results</a>
+							</li>
+							
+							<br />
+						</ul>
+					</div>
+					<div class="span2">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span12">
+							<table class="table table-striped" class="solid">
+									<h2>Task1 - Oriented Leaderboard <strong>(Recommended)</strong></h2>
+									<thead>
+										<tr>
+											<th>Rank</th>
+											<th>Methods</th>
+											<th>Authors</th>
+											<th border="1"> <strong style="font-size:16px; background-color:yellow;">mAP</strong></th>
+											<th>plane</th>
+											<th>baseball diamond</th>
+											<th>bridge</th>
+											<th>ground track field</th>
+											<th>small vehicle</th>
+											<th>large vehicle</th>
+											<th>ship</th>
+											<th>tennis court</th>
+											<th>basketball court</th>
+											<th>storage tank</th>
+											<th>soccer ball field</th>
+											<th>roundabout</th>
+											<th>harbor</th>
+											<th>swimming pool</th>
+											<th>helicopter</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												FR-O <a href="https://arxiv.org/abs/1711.10398">[1]</a>
+											</td>
+											<td>baseline</td>
+											<td>52.93</td>
+											<td>79.09</td>
+											<td>69.12</td>
+											<td>17.17</td>
+											<td>63.49</td>
+											<td>34.20</td>
+											<td>37.16</td>
+											<td>36.20</td>
+											<td>89.19</td>
+											<td>69.60</td>
+											<td>58.96</td>
+											<td>49.40</td>
+											<td>52.52</td>
+											<td>46.69</td>
+											<td>44.80</td>
+											<td>46.30</td>
+											
+										</tr>
+
+
+
+
+										<tr>
+												<td>2</td>
+												<td>FR-H <a href="http://ieeexplore.ieee.org/abstract/document/7485869/">[2]</a>
+												</td>
+												<td>baseline</td>
+												<td>36.29</td>
+												<td>47.16</td>
+												<td>61</td>
+												<td>6.14</td>
+												<td>51.74</td>
+												<td>14.87</td>
+												<td>12.8</td>
+												<td>6.88</td>
+												<td>56.26</td>
+												<td>59.97</td>
+												<td>57.32</td>
+												<td>47.83</td>
+												<td>48.7</td>
+												<td>13.43</td>
+												<td>37.25</td>
+												<td>23.05</td>
+											  </tr>
+
+										<tr>
+											<td>3</td>
+											<td>R-FCN <a href="http://papers.nips.cc/paper/6465-r-fcn-object-detection-via-region-based-fully-convolutional-networks">[3]</a> </td>
+											<td>baseline</td>
+											<td>26.79</td>
+											<td>37.8</td>
+											<td>38.21</td>
+											<td>3.64</td>
+											<td>37.26</td>
+											<td>6.74</td>
+											<td>2.60</td>
+											<td>5.59</td>
+											<td>22.85</td>
+											<td>46.93</td>
+											<td>66.04</td>
+											<td>33.37</td>
+											<td>47.15</td>
+											<td>10.6</td>
+											<td>25.19</td>
+											<td>17.96</td>
+										</tr>
+
+										<tr>
+												<td>4</td>
+												<td>YOLOv2 <a href="https://arxiv.org/abs/1612.08242">[4]</a> </td>
+												<td>baseline</td>
+												<td>21.39</td>
+												<td>39.57</td>
+												<td>20.29</td>
+												<td>9.8</td>
+												<td>23.42</td>
+												<td>8.85</td>
+												<td>2.09</td>
+												<td>4.82</td>
+												<td>44.34</td>
+												<td>38.25</td>
+												<td>34.65</td>
+												<td>16.02</td>
+												<td>37.62</td>
+												<td>8.23</td>
+												<td>25.5</td>
+												<td>7.45</td>
+											  </tr>
+
+
+										<tr>
+											<td>5</td>
+											<td>SSD inception-v2 <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-46448-0_2">[5]</a> </td>
+											<td>baseline</td>
+											<td>10.59</td>
+											<td>39.83</td>
+											<td>9.09</td>
+											<td>0.64</td>
+											<td>13.18</td>
+											<td>0.26</td>
+											<td>0.39</td>
+											<td>1.11</td>
+											<td>16.24</td>
+											<td>27.57</td>
+											<td>9.23</td>
+											<td>27.16</td>
+											<td>9.09</td>
+											<td>3.03</td>
+											<td>1.05</td>
+											<td>1.01</td>
+										</tr>
+
+										<!-- <tr>
+											<td>Sachi2n</td>
+											<td>Mumbai</td>
+											<td>400003</td>
+										</tr>
+										<tr>
+											<td>Uma</td>
+											<td>Pune</td>
+											<td>411027</td>
+										</tr> -->
+									</tbody>
+							</table>
+
+							<table class="table table-striped">
+									<h2>Task2 - Horizontal Leaderboard</h2>
+									<thead>
+										<tr>
+											<th>Rank</th>
+											<th>Methods</th>
+											<th>Authors</th>
+											<th> <strong style="font-size:16px; background-color:yellow;" >mAP</strong> </th>
+											<th>plane</th>
+											<th>baseball diamond</th>
+											<th>bridge</th>
+											<th>ground track field</th>
+											<th>small vehicle</th>
+											<th>large vehicle</th>
+											<th>ship</th>
+											<th>tennis court</th>
+											<th>basketball court</th>
+											<th>storage tank</th>
+											<th>soccer ball field</th>
+											<th>roundabout</th>
+											<th>harbor</th>
+											<th>swimming pool</th>
+											<th>helicopter</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Faster-RCNN <a href="http://ieeexplore.ieee.org/abstract/document/7485869/">[2]</a>
+											</td>
+											<td>baseline</td>
+											<td>60.46</td>
+											<td>80.32</td>
+											<td>77.55</td>
+											<td>32.86</td>
+											<td>68.13</td>
+											<td>53.66</td>
+											<td>52.49</td>
+											<td>50.04</td>
+											<td>90.41</td>
+											<td>75.05</td>
+											<td>59.59</td>
+											<td>57</td>
+											<td>49.81</td>
+											<td>61.69</td>
+											<td>56.46</td>
+											<td>41.85</td>
+										
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>R-FCN <a href="http://papers.nips.cc/paper/6465-r-fcn-object-detection-via-region-based-fully-convolutional-networks">[3]</a> </td>
+											<td>baseline</td>
+											<td>47.24</td>
+											<td>79.33</td>
+											<td>44.26</td>
+											<td>36.58</td>
+											<td>53.53</td>
+											<td>39.38</td>
+											<td>34.15</td>
+											<td>47.29</td>
+											<td>45.66</td>
+											<td>47.74</td>
+											<td>65.84</td>
+											<td>37.92</td>
+											<td>44.23</td>
+											<td>47.23</td>
+											<td>50.64</td>
+											<td>34.9</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>YOLO-v2 <a href="https://arxiv.org/abs/1612.08242">[4]</a></td>
+											<td>baseline</td>
+											<td>40.71</td>
+											<td>79.21</td>
+											<td>35.97</td>
+											<td>18.58</td>
+											<td>29.93</td>
+											<td>39.92</td>
+											<td>33.74</td>
+											<td>54.53</td>
+											<td>72.21</td>
+											<td>48.11</td>
+											<td>38.99</td>
+											<td>24.16</td>
+											<td>39.77</td>
+											<td>38.73</td>
+											<td>47.76</td>
+											<td>9.12</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>SSD inception-v2 <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-46448-0_2">[5]</a> </td>
+											<td>baseline</td>
+											<td>10.94</td>
+											<td>44.74</td>
+											<td>11.21</td>
+											<td>6.22</td>
+											<td>6.91</td>
+											<td>2</td>
+											<td>10.24</td>
+											<td>11.34</td>
+											<td>15.59</td>
+											<td>12.56</td>
+											<td>17.94</td>
+											<td>14.73</td>
+											<td>4.55</td>
+											<td>4.55</td>
+											<td>0.53</td>
+											<td>1.01</td>
+
+										</tr>
+										<!-- <tr>
+											<td>Sachi2n</td>
+											<td>Mumbai</td>
+											<td>400003</td>
+										</tr>
+										<tr>
+											<td>Uma</td>
+											<td>Pune</td>
+											<td>411027</td>
+										</tr> -->
+									</tbody>
+							</table>
+
+							<h2>References</h2>
+							<ol style="font-size: 17px">
+							<li>
+								G.-S. Xia, et. al. DOTA: A Large-scale Dataset for Object Detection in Aerial Images. arXiv preprint arXiv:1711.10398, 2017.
+							</li>
+							<li>
+							   S. Ren, et. al. Faster R-CNN:
+								towards real-time object detection with region proposal networks.
+								IEEE TPAMI, 39(6):1137–1149, 2017.
+							</li>
+							<li>
+							   J. Dai, et. al. R-FCN: object detection via
+								region-based fully convolutional networks. In NIPS, pages
+								379–387, 2016.
+							</li>
+							<li>
+								J. Redmon and A. Farhadi. YOLO9000: better, faster, stronger[J]. arXiv preprint arXiv:1612.08242, 2016.
+							</li>
+							<li>
+								W. Liu, et. al. SSD: single shot multibox detector.
+								In ECCV, pages 21–37, 2016.
+							</li>
+							</ol>
+							<br><br>
+						</div>
+				</div>
+
+
+
+			</div>
+		</div>
+		<br>
+<div align="center">
+<a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3220030&c=9660403" alt="AmazingCounters.com"></a>
+</div>
+<br>	
+	</div>
+
+</body>
+
+</html>
