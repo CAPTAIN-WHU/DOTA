@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>DOTA</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://captain.whu.edu.cn/DOTAweb/css/mystyle.css"
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+        body {
+               background-color : rgb(250,250,250); /*UCLA bgcolor*/
+        }
+    </style>	
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="span12">
+				<div class="hero-unit">
+					<h1 style="text-align:center; margin-top:60px; font-weight: bold">
+						DOTA: A Large-scale Dataset for Object Detection in Aerial Images
+					</h1>
+					<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px">
+						<a href="http://captain.whu.edu.cn/xia_En.html">Gui-Song Xia</a>,
+						<a href="http://mclab.eic.hust.edu.cn/~xbai/">Xiang Bai</a>, 
+						<a href="http://captain.whu.edu.cn/dingjian.html">Jian Ding</a>, 
+						<a href="">Zhen Zhu</a>, 
+						<a href="http://vision.cornell.edu/se3/people/serge-belongie/">Serge Belongie</a>, <br>
+						<a href="http://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>, 
+						<a href="http://www.dlr.de/caf/en/desktopdefault.aspx/tabid-5242/8788_read-933/sortby-lastname/">Mihai Datcu</a>, 
+						<a href="http://www.dsi.unive.it/~pelillo/">Marcello Pelillo</a>, 
+						<a href="http://www.lmars.whu.edu.cn/prof_web/zhangliangpei/rs/xueshu.htm">Liangpei Zhang</a>. 
+					</p>
+				</div>				
+
+				<div class="row">
+					<div class="span4">
+					</div>
+					<div class="span4">
+						<ul class="nav nav-tabs">
+							<!-- <li class="active"> -->
+							<li >
+								<a href="http://captain.whu.edu.cn/DOTAweb/index.html">Home</a>
+							</li>
+							<li class="active">
+								<a href="http://captain.whu.edu.cn/DOTAweb/dataset.html">Dataset</a>
+							</li>
+							<li>
+							<!-- <li> -->
+								<a href="http://captain.whu.edu.cn/DOTAweb/tasks.html">Tasks</a>
+							</li>
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/evaluation.html">Evaluation</a>
+							</li>
+							<li>
+								<a href="http://captain.whu.edu.cn/DOTAweb/results.html">Results</a>
+							</li>
+							<br />
+						</ul>
+					</div>
+					<div class="span4">
+					</div>
+				</div>
+				<h2 style="text-align:left; margin-bottom:10px; margin-top:30px; ">
+					Image Source and Usage License
+				</h2>
+				<p style="text-align:justify;">
+					The images of in DOTA-v1.0 dataset are manily collected from the Google Earth, some are taken by satellite JL-1,
+				     the others are taken by satellite GF-2 of the China Centre for Resources Satellite Data and Application.
+				</p>
+				<p style="text-align:justify;">
+						Use of the images from Google Earth must respect the corresponding terms of use:
+						<a href="https://www.google.com/permissions/geoguidelines.html">"Google Earth" terms of use</a>.
+				</p>
+				<p style="text-align:justify;">
+				      All images and their associated annotations in DOTA <strong style="color:blue">can be used for academic purposes only, but any commercial use is prohibited</strong>.
+				</p>
+				<h2>
+					Object Category
+				</h2>
+				<p>
+						The object categories in DOTA-v1.0 include: plane, ship, storage tank,
+						baseball diamond, tennis court, basketball court, ground track field, harbor, bridge, large vehicle,
+						small vehicle, helicopter, roundabout, soccer ball field and basketball court.
+				</p>
+				<!-- <p>
+					Fifteen categories are chosen and annotated in our dataset
+					<ul>
+						<li>plane</li>
+						<li>ship</li>
+						<li>storage tank</li>
+						<li>baseball diamond</li>
+						<li>tennis court</li>
+						<li>basketball court</li>
+						<li>ground track field</li>
+						<li>harbor</li>
+						<li>bridge</li>
+						<li>large vehicle</li>  
+						<li>small vehicle</li>
+						<li>helicopter</li> 
+						<li>roundabout</li> 
+						<li>soccer ball field</li>   
+						<li>basketball court</li>  
+
+					</ul>
+
+				</p> -->
+
+				<h2>
+					Annotation format
+				</h2>
+						<p style="text-align:justify; font-size: 17px">
+					In the dataset, each instance's location is annotated by a quadrilateral bounding boxes, which can
+					be denoted as <strong style="color:blue"> "x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>" </strong>  
+					where (x<sub>i</sub>, y<sub>i</sub>) denotes the positions of the oriented bounding boxes' vertices in the image. 
+					The vertices are arranged in a clockwise order.
+					The following is the Visualization of adopted annotation method. The yellow point represents the <strong style="color:blue">starting point</strong>.
+					which refers to: (a) top left corner of a plane, (b) top left corner of a large vehicle
+diamond, (c) the center of sector-shaped baseball. 
+				</p>
+						<p style="text-align:justify; font-size: 17px">
+						Except the annotation
+						of location, category label is assigned for each instance, which comes from one of the above 15
+						selected categories, and meanwhile a difficult label is provided which indicates whether the instance
+						is difficult to be detected(1 for difficult, 0 for not difficult). Annotations for an image are saved in a text file with the same file name.
+						At the first line, 'imagesource'(from GoogleEarth, GF-2 or JL-1) is given. At the second line, ’gsd’(ground sample distance, the physical size of one image pixel, in meters)
+						is given. From third line to last line in annotation text file, annotation for each instance is given. The annotation format is:
+				</p>
+				<pre>
+					<code style="font-size:16px;">
+'imagesource':imagesource
+'gsd':gsd
+x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
+x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
+...						
+					</code>
+				</pre>
+
+				<div class="container">
+						<!-- <div class="row">
+							<div class="col-md-2 col-md-offset-5">
+								<p>
+									visulizationfsfsdfdsffffff,ffffffffff
+								</p>
+							</div>
+						</div> -->
+
+						
+						<div class="row">
+							<div class="col-md-4">
+							  <div class="container">
+								  <!-- <h2>Rounded Corners</h2> -->
+								  <img src="http://captain.whu.edu.cn/DOTAweb/images/plane1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+								  <figcaption style="position:absolute; left:180px; font-size:18px;"><strong>(a)</strong></figcaption> 
+
+								  <!-- <p style="text-align:center;position:relative"> a </p> -->
+							
+								</div>
+							</div>
+							<div class="col-md-4">
+							  <div class="container">
+								  <!-- <h2>Rounded Corners</h2> -->
+								  <img src="http://captain.whu.edu.cn/DOTAweb/images/rotaterec.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+								  <figcaption style="position:absolute; left:180px; font-size:18px"> <strong>(b)</strong></figcaption> 
+								  <!-- <p style="text-align:center">b </p> -->
+
+								</div>
+							</div>
+							<div class="col-md-4">
+							  <div class="container">
+								  <!-- <h2>Rounded Corners</h2> -->
+								  <img src="http://captain.whu.edu.cn/DOTAweb/images/baseball2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+								  <!-- <p style="text-align:center">c </p> -->
+								  <figcaption style="position:absolute; left:180px; font-size:18px"> <strong>(c)</strong> </figcaption>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!-- <img src="http://captain.whu.edu.cn/DOTAweb/instances-DOTA.jpg" class="img-responsive center-block"  /> -->
+
+				<h2>
+					Download
+				</h2>
+				   <p style="text-align:justify; font-size: 17px"> 
+				   You can download DOTA-v1.0 from either Baidu Drive or Google Drive, according to your network connections. 
+				   </p>
+				<ul>
+					<!-- <li>
+							Dota Training Images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
+					</li>	
+
+					<li>
+							Dota Validation Images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
+					</li>
+
+					<li>
+							Testing images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
+					</li>
+						<!-- <a href="http://captain.whu.edu.cn/datasets/FakeDota_train.tar">DOTA_test</a> -->
+					<!-- <li>
+							Dota Training Annotations <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
+					</li>
+					<li>
+							Dota Validation Annotations <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>							
+					</li> -->
+					<li style="font-size:17px">
+						DOTA-v1.0 on Baidu Drive: <a href="https://pan.baidu.com/s/1kWyRGaz">Training set</a>, <a href="https://pan.baidu.com/s/1qZCoF72">Validation set</a>, <a href="https://pan.baidu.com/s/1i6ly9Id">Testing images</a>
+					</li>
+					<li style="font-size:17px">
+						DOTA-v1.0 on Google Drive: <a href="https://drive.google.com/drive/folders/1gmeE3D7R62UAtuIFOB9j2M5cUPTwtsxK?usp=sharing">Training set</a>, <a href="https://drive.google.com/drive/folders/1n5w45suVOyaqY84hltJhIZdtVFD9B224?usp=sharing">Validation set</a>, <a href="https://drive.google.com/drive/folders/1mYOf5USMGNcJRPcvRVJVV1uHEalG5RPl?usp=sharing">Testing images</a>
+					</li>
+					<br>					
+					<br>
+				</ul>
+			
+				
+			</div>
+		</div>
+		<br>
+<div align="center">
+<a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3220030&c=9660403" alt="AmazingCounters.com"></a>
+</div>
+<br>			
+	</div>
+
+</body>
+</html>
+
+
+
