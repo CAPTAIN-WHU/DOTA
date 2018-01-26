@@ -1,0 +1,10 @@
+p {font-size: 17px;
+}
+td {text-align: center; }
+/* figcaption {text-align: center; position: inherit;} */
+ul {font-size: 17px;}
+ol {font-size: 17px;}
+th:nth-child(3), td:nth-child(3){border-right: 2px solid #ddd}
+/* table {border-style:solid; } */
+/* .table-a */
+ table{border: 2px solid #ddd}
