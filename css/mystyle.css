@@ -8,3 +8,8 @@ th:nth-child(3), td:nth-child(3){border-right: 2px solid #ddd}
 /* table {border-style:solid; } */
 /* .table-a */
  table{border: 2px solid #ddd}
+
+ .news{
+    color:red;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
