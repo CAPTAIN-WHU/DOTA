@@ -130,7 +130,7 @@ imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</s
 				<p>
 					Detecting object with horizontal bounding boxes is usual in many previous contests for object
 					detection. The aim of this task is to accurately localize the instance in terms of horizontal bounding
-					box with (x, y, w, h) format. In the task, the ground truths for training and testing are generated
+					box with (xmin, ymin, xmax, ymax) format. In the task, the ground truths for training and testing are generated
 					by calculating the axis-aligned bounding boxes over original annotated bounding boxes.
 				</p>
 				<p>
@@ -154,8 +154,8 @@ imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</s
 				</p>
 				<pre>
 					<code style="font-size:16px">
-imgname score x y w h
-imgname score x y w h
+imgname score xmin ymin xmax ymax
+imgname score xmin ymin xmax ymax
 ... 
 					</code>
 				</pre>
