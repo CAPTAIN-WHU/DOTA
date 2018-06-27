@@ -9,7 +9,25 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css"
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-	
+	<script src="css/jquery-3.2.1-dist.min.js"></script>
+	<!-- <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
+	<script src="https://cdn.datatables.net/buttons/1.4.0/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.4.0/js/buttons.html5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.32/build/pdfmake.min.js"></script>
+	<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.32/build/vfs_fonts.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.0/css/buttons.dataTables.min.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" /> -->
+
+	<!-- For dataTable2 -->
+	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+	<!-- <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 	<style>
         body {
                background-color : rgb(250,250,250); /*UCLA bgcolor*/
@@ -71,316 +89,84 @@
 
 				<div class="row">
 					<div class="span12">
-							<table class="table table-striped" class="solid">
-									<h2>Task1 - Oriented Leaderboard <strong>(Recommended)</strong></h2>
-									<thead>
-										<tr>
-											<th>Rank</th>
-											<th>Methods</th>
-											<th>Authors</th>
-											<th border="1"> <strong style="font-size:16px; background-color:yellow;">mAP</strong></th>
-											<th>plane</th>
-											<th>baseball diamond</th>
-											<th>bridge</th>
-											<th>ground track field</th>
-											<th>small vehicle</th>
-											<th>large vehicle</th>
-											<th>ship</th>
-											<th>tennis court</th>
-											<th>basketball court</th>
-											<th>storage tank</th>
-											<th>soccer ball field</th>
-											<th>roundabout</th>
-											<th>harbor</th>
-											<th>swimming pool</th>
-											<th>helicopter</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												FR-O <a href="https://arxiv.org/abs/1711.10398">[1]</a>
-											</td>
-											<td>baseline</td>
-                                            <td>54.13</td>
-                                            <td>79.42</td>
-                                            <td>77.13</td>
-                                            <td>17.7</td>
-                                            <td>64.05</td>
-                                            <td>35.3</td>
-                                            <td>38.02</td>
-                                            <td>37.16</td>
-                                            <td>89.41</td>
-                                            <td>69.64</td>
-                                            <td>59.28</td>
-                                            <td>50.3</td>
-                                            <td>52.91</td>
-                                            <td>47.89</td>
-                                            <td>47.4</td>
-                                            <td>46.3</td>
-											
-										</tr>
+						<h1>Task1 - Oriented Leaderboard</h1>
+						<table id="Task1" class="display" style="width:100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Team Name</th>
+									<!-- <th>Team Member</th> -->
+									<!-- <th>Institute</th> -->
+									<th> mAP</strong> </th>
+									<th>Plane</th>
+									<th>BD</th>
+									<th>Bridge</th>
+									<th>GTF</th>
+									<th>SV</th>
+									<th>LV</th>
+									<th>Ship</th>
+									<th>TC</th>
+									<th>BC</th>
+									<th>ST</th>
+									<th>SBF</th>
+									<th>RA</th>
+									<th>Harbor</th>
+									<th>SP</th>
+									<th>HC</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<!-- <tfoot>
+								<tr>
+									<th></th>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Salary</th>
+								</tr>
+							</tfoot> -->
+						</table>
 
+						<h2>Task2 - Horizontal Leaderboard</h2>
+						<table id="Task2" class="display" style="width:100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Team Name</th>
+									<!-- <th>Team Member</th> -->
+									<!-- <th>Institute</th> -->
+									<th> mAP</strong> </th>
+									<th>Plane</th>
+									<th>BD</th>
+									<th>Bridge</th>
+									<th>GTF</th>
+									<th>SV</th>
+									<th>LV</th>
+									<th>Ship</th>
+									<th>TC</th>
+									<th>BC</th>
+									<th>ST</th>
+									<th>SBF</th>
+									<th>RA</th>
+									<th>Harbor</th>
+									<th>SP</th>
+									<th>HC</th>
+									<th>Date</th>
+									<!-- <th>extn</th> -->
+								</tr>
+							</thead>
+							<!-- <tfoot>
+								<tr>
+									<th></th>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>extn</th>
+								</tr>
+							</tfoot> -->
+						</table>
 
-
-
-										<tr>
-												<td>2</td>
-												<td>FR-H <a href="http://ieeexplore.ieee.org/abstract/document/7485869/">[2]</a>
-												</td>
-												<td>baseline</td>
-                                                <td>39.95</td>
-                                                <td>49.74</td>
-                                                <td>64.22</td>
-                                                <td>9.38</td>
-                                                <td>56.66</td>
-                                                <td>19.18</td>
-                                                <td>14.17</td>
-                                                <td>9.51</td>
-                                                <td>61.61</td>
-                                                <td>65.47</td>
-                                                <td>57.52</td>
-                                                <td>51.36</td>
-                                                <td>49.41</td>
-                                                <td>20.8</td>
-                                                <td>45.84</td>
-                                                <td>24.38</td>
-											  </tr>
-
-										<tr>
-											<td>3</td>
-											<td>R-FCN <a href="http://papers.nips.cc/paper/6465-r-fcn-object-detection-via-region-based-fully-convolutional-networks">[3]</a> </td>
-											<td>baseline</td>
-                                            <td>30.84</td>
-                                            <td>39.57</td>
-                                            <td>46.13</td>
-                                            <td>3.03</td>
-                                            <td>38.46</td>
-                                            <td>9.1</td>
-                                            <td>3.66</td>
-                                            <td>7.45</td>
-                                            <td>41.97</td>
-                                            <td>50.43</td>
-                                            <td>66.98</td>
-                                            <td>40.34</td>
-                                            <td>51.28</td>
-                                            <td>11.14</td>
-                                            <td>35.59</td>
-                                            <td>17.45</td>
-										</tr>
-
-										<tr>
-												<td>4</td>
-												<td>YOLOv2 <a href="https://arxiv.org/abs/1612.08242">[4]</a> </td>
-												<td>baseline</td>
-                                                <td>25.492</td>
-                                                <td>52.75</td>
-                                                <td>24.24</td>
-                                                <td>10.6</td>
-                                                <td>35.5</td>
-                                                <td>14.36</td>
-                                                <td>2.41</td>
-                                                <td>7.37</td>
-                                                <td>51.79</td>
-                                                <td>43.98</td>
-                                                <td>31.35</td>
-                                                <td>22.3</td>
-                                                <td>36.68</td>
-                                                <td>14.61</td>
-                                                <td>22.55</td>
-                                                <td>11.89</td>
-											  </tr>
-
-
-										<tr>
-											<td>5</td>
-											<td>SSD inception-v2 <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-46448-0_2">[5]</a> </td>
-											<td>baseline</td>
-                                            <td>17.84</td>
-                                            <td>41.06</td>
-                                            <td>24.31</td>
-                                            <td>4.55</td>
-                                            <td>17.1</td>
-                                            <td>15.93</td>
-                                            <td>7.72</td>
-                                            <td>13.21</td>
-                                            <td>39.96</td>
-                                            <td>12.05</td>
-                                            <td>46.88</td>
-                                            <td>9.09</td>
-                                            <td>30.82</td>
-                                            <td>1.36</td>
-                                            <td>3.5</td>
-                                            <td>0.0</td>
-										</tr>
-
-										<!-- <tr>
-											<td>Sachi2n</td>
-											<td>Mumbai</td>
-											<td>400003</td>
-										</tr>
-										<tr>
-											<td>Uma</td>
-											<td>Pune</td>
-											<td>411027</td>
-										</tr> -->
-									</tbody>
-							</table>
-
-							<table class="table table-striped">
-									<h2>Task2 - Horizontal Leaderboard</h2>
-									<thead>
-										<tr>
-											<th>Rank</th>
-											<th>Methods</th>
-											<th>Authors</th>
-											<th> <strong style="font-size:16px; background-color:yellow;" >mAP</strong> </th>
-											<th>plane</th>
-											<th>baseball diamond</th>
-											<th>bridge</th>
-											<th>ground track field</th>
-											<th>small vehicle</th>
-											<th>large vehicle</th>
-											<th>ship</th>
-											<th>tennis court</th>
-											<th>basketball court</th>
-											<th>storage tank</th>
-											<th>soccer ball field</th>
-											<th>roundabout</th>
-											<th>harbor</th>
-											<th>swimming pool</th>
-											<th>helicopter</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Faster-RCNN <a href="http://ieeexplore.ieee.org/abstract/document/7485869/">[2]</a>
-											</td>
-											<td>baseline</td>
-											<td>60.46</td>
-											<td>80.32</td>
-											<td>77.55</td>
-											<td>32.86</td>
-											<td>68.13</td>
-											<td>53.66</td>
-											<td>52.49</td>
-											<td>50.04</td>
-											<td>90.41</td>
-											<td>75.05</td>
-											<td>59.59</td>
-											<td>57</td>
-											<td>49.81</td>
-											<td>61.69</td>
-											<td>56.46</td>
-											<td>41.85</td>
-										
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>R-FCN <a href="http://papers.nips.cc/paper/6465-r-fcn-object-detection-via-region-based-fully-convolutional-networks">[3]</a> </td>
-											<td>baseline</td>
-                                            <td>52.58</td>
-                                            <td>81.01</td>
-                                            <td>58.96</td>
-                                            <td>31.64</td>
-                                            <td>58.97</td>
-                                            <td>49.77</td>
-                                            <td>45.04</td>
-                                            <td>49.29</td>
-                                            <td>68.99</td>
-                                            <td>52.07</td>
-                                            <td>67.42</td>
-                                            <td>41.83</td>
-                                            <td>51.44</td>
-                                            <td>45.15</td>
-                                            <td>53.3</td>
-                                            <td>33.89</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>YOLO-v2 <a href="https://arxiv.org/abs/1612.08242">[4]</a></td>
-											<td>baseline</td>
-                                            <td>39.2</td>
-                                            <td>76.9</td>
-                                            <td>33.87</td>
-                                            <td>22.73</td>
-                                            <td>34.88</td>
-                                            <td>38.73</td>
-                                            <td>32.02</td>
-                                            <td>52.37</td>
-                                            <td>61.65</td>
-                                            <td>48.54</td>
-                                            <td>33.91</td>
-                                            <td>29.27</td>
-                                            <td>36.83</td>
-                                            <td>36.44</td>
-                                            <td>38.26</td>
-                                            <td>11.61</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>SSD inception-v2 <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-46448-0_2">[5]</a> </td>
-											<td>baseline</td>
-                                            <td>29.86</td>
-                                            <td>57.85</td>
-                                            <td>32.79</td>
-                                            <td>16.14</td>
-                                            <td>18.67</td>
-                                            <td>0.05</td>
-                                            <td>36.93</td>
-                                            <td>24.74</td>
-                                            <td>81.16</td>
-                                            <td>25.1</td>
-                                            <td>47.47</td>
-                                            <td>11.22</td>
-                                            <td>31.53</td>
-                                            <td>14.12</td>
-                                            <td>9.09</td>
-                                            <td>0.0</td>
-
-										</tr>
-										<!-- <tr>
-											<td>Sachi2n</td>
-											<td>Mumbai</td>
-											<td>400003</td>
-										</tr>
-										<tr>
-											<td>Uma</td>
-											<td>Pune</td>
-											<td>411027</td>
-										</tr> -->
-									</tbody>
-							</table>
-
-							<h2>References</h2>
-							<ol style="font-size: 17px">
-							<li>
-								G.-S. Xia, et. al. DOTA: A Large-scale Dataset for Object Detection in Aerial Images. To appear in CVPR，2018.
-							</li>
-							<li>
-							   S. Ren, et. al. Faster R-CNN:
-								towards real-time object detection with region proposal networks.
-								IEEE TPAMI, 39(6):1137–1149, 2017.
-							</li>
-							<li>
-							   J. Dai, et. al. R-FCN: object detection via
-								region-based fully convolutional networks. In NIPS, pages
-								379–387, 2016.
-							</li>
-							<li>
-								J. Redmon and A. Farhadi. YOLO9000: better, faster, stronger[J]. arXiv preprint arXiv:1612.08242, 2016.
-							</li>
-							<li>
-								W. Liu, et. al. SSD: single shot multibox detector.
-								In ECCV, pages 21–37, 2016.
-							</li>
-							</ol>
-							<br><br>
-						</div>
+					</div>
 				</div>
 
 
@@ -393,6 +179,198 @@
 </div>
 <br>	
 	</div>
+
+
+	<script>
+		function format(d) {
+			// `d` is the original data object for the row
+
+			return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+				'<tr>' +
+				'<td>TeamName:</td>' +
+				'<td>' + d.TeamNames + '</td>' +
+				'</tr>' +
+				'<tr>' +
+				'<td>Institute:</td>' +
+				'<td>' + d.Institute + '</td>' +
+				'</tr>' +
+				'<tr>' +
+				'<td>TeamMembers:</td>' +
+				'<td>' + d.TeamMembers + '</td>' +
+				'</tr>' +
+				'<tr>' +
+				'<td>Method:</td>' +
+				'<td>' + d.description + '</td>' +
+				'</tr>'
+				// '</tr>' +
+				// '<tr>' + 
+				// '<td>Links: (not finished yet)</td>'
+				// '</tr>'
+				'</table>';
+		}
+
+		// function create_table(task) {
+		// 	$(document).ready(function () {
+		// 	var table = $('#' + task).DataTable({
+		// 		"ajax": "leaderboards/" + task + ".txt",
+		// 		"columns": [
+		// 			{
+		// 				"className": 'details-control',
+		// 				"orderable": false,
+		// 				"data": null,
+		// 				"defaultContent": ''
+		// 			},
+		// 			{ "data": "TeamNames" },
+		// 			// { "data": "Team Member" },
+		// 			// { "data": "Institute" },
+		// 			{ "data": "mAP" },
+		// 			{ "data": "Plane"},
+		// 			{ "data": "BD" },
+		// 			{ "data": "Bridge"},
+		// 			{ "data": "GTF" },
+		// 			{ "data": "SV"},
+		// 			{ "data": "LV" },
+		// 			{ "data": "Ship"},
+		// 			{ "data": "TC"},
+		// 			{ "data": "BC" },
+		// 			{ "data": "ST"},
+		// 			{ "data": "SBF" },
+		// 			{ "data": "RA"},
+		// 			{ "data": "Harbor" },
+		// 			{ "data": "SP"},
+		// 			{ "data": "HC"}
+		// 		],
+		// 		"order": [[2, 'dsc']]
+		// 	});
+
+		// 	// Add event listener for opening and closing details
+		// 	$('#Task1 tbody').on('click', 'td.details-control', function () {
+		// 		var tr = $(this).closest('tr');
+		// 		var row = table.row(tr);
+
+		// 		if (row.child.isShown()) {
+		// 			// This row is already open - close it
+		// 			row.child.hide();
+		// 			tr.removeClass('shown');
+		// 		}
+		// 		else {
+		// 			// Open this row
+		// 			row.child(format(row.data())).show();
+		// 			tr.addClass('shown');
+		// 		}
+		// 	});
+		// });
+		// }
+		
+
+		$(document).ready(function () {
+			var table = $('#Task1').DataTable({
+				"ajax": "leaderboards/learderboard1.txt",
+				"columns": [
+					{
+						"className": 'details-control',
+						"orderable": false,
+						"data": null,
+						"defaultContent": ''
+					},
+					{ "data": "TeamNames" },
+					// { "data": "Team Member" },
+					// { "data": "Institute" },
+					{ "data": "mAP" },
+					{ "data": "Plane"},
+					{ "data": "BD" },
+					{ "data": "Bridge"},
+					{ "data": "GTF" },
+					{ "data": "SV"},
+					{ "data": "LV" },
+					{ "data": "Ship"},
+					{ "data": "TC"},
+					{ "data": "BC" },
+					{ "data": "ST"},
+					{ "data": "SBF" },
+					{ "data": "RA"},
+					{ "data": "Harbor" },
+					{ "data": "SP"},
+					{ "data": "HC"},
+					{ "data": "date"}
+				],
+				"order": [[2, 'dsc']]
+			});
+
+			// Add event listener for opening and closing details
+			$('#Task1 tbody').on('click', 'td.details-control', function () {
+				var tr = $(this).closest('tr');
+				var row = table.row(tr);
+
+				if (row.child.isShown()) {
+					// This row is already open - close it
+					row.child.hide();
+					tr.removeClass('shown');
+				}
+				else {
+					// Open this row
+					row.child(format(row.data())).show();
+					tr.addClass('shown');
+				}
+			});
+		});
+
+
+		$(document).ready(function () {
+			var table2 = $('#Task2').DataTable({
+				"ajax": "leaderboards/learderboard2.txt",
+				"columns": [
+					{
+						"className": 'details-control',
+						"orderable": false,
+						"data": null,
+						"defaultContent": ''
+					},
+					{ "data": "TeamNames" },
+					// { "data": "Team Member" },
+					// { "data": "Institute" },
+					{ "data": "mAP" },
+					{ "data": "Plane"},
+					{ "data": "BD" },
+					{ "data": "Bridge"},
+					{ "data": "GTF" },
+					{ "data": "SV"},
+					{ "data": "LV" },
+					{ "data": "Ship"},
+					{ "data": "TC"},
+					{ "data": "BC" },
+					{ "data": "ST"},
+					{ "data": "SBF" },
+					{ "data": "RA"},
+					{ "data": "Harbor" },
+					{ "data": "SP"},
+					{ "data": "HC"},
+					{ "data": "date"},
+				],
+				"order": [[2, 'dsc']]
+			});
+
+			// Add event listener for opening and closing details
+			$('#Task2 tbody').on('click', 'td.details-control', function () {
+				var tr = $(this).closest('tr');
+				var row = table2.row(tr);
+
+				if (row.child.isShown()) {
+					// This row is already open - close it
+					row.child.hide();
+					tr.removeClass('shown');
+				}
+				else {
+					// Open this row
+					row.child(format(row.data())).show();
+					tr.addClass('shown');
+				}
+			});
+		});
+
+
+	</script>
+
 
 </body>
 

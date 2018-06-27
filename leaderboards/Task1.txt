@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "BC": 0.681,
+            "BD": 0.714,
+            "Bridge": 0.342,
+            "GTF": 0.618,
+            "HC": 0.479,
+            "Harbor": 0.624,
+            "LV": 0.498,
+            "Plane": 0.812,
+            "RA": 0.556,
+            "SBF": 0.533,
+            "SP": 0.528,
+            "ST": 0.699,
+            "SV": 0.612,
+            "Ship": 0.566,
+            "TC": 0.898,
+            "TeamMembers": "liuqingqing",
+            "TeamNames": "LQQ",
+            "date": "2018-05-26 07:32:19.851110",
+            "description": "rotation+GAN+fusion_feature",
+            "mAP": 0.611
+        },
+        {
+            "BC": 0.681,
+            "BD": 0.714,
+            "Bridge": 0.342,
+            "GTF": 0.618,
+            "HC": 0.479,
+            "Harbor": 0.624,
+            "LV": 0.498,
+            "Plane": 0.812,
+            "RA": 0.556,
+            "SBF": 0.533,
+            "SP": 0.528,
+            "ST": 0.699,
+            "SV": 0.612,
+            "Ship": 0.566,
+            "TC": 0.898,
+            "TeamMembers": "YangXue,Yangjirui",
+            "TeamNames": "Detetion TeamUCAS",
+            "date": "2018-05-26 08:44:34.717688",
+            "description": "0526test,rotation+GAN+fusion_feature",
+            "mAP": 0.611
+        }
+    ]
+}
