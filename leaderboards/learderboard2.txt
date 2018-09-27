@@ -1,30 +1,6 @@
 {
     "data": [
         {
-            "BD": 0.812,
-            "mAP": 0.746,
-            "BC": 0.819,
-            "HC": 0.591,
-            "TeamNames": "hqqiu@std.uestc.edu.cn",
-            "LV": 0.76,
-            "Harbor": 0.752,
-            "Plane": 0.89,
-            "RA": 0.655,
-            "TC": 0.905,
-            "TeamMembers": "Heqian Qiu",
-            "description": "test_v2",
-            "GTF": 0.712,
-            "Institute": "UESTC",
-            "date": "2018-09-16 03:25:42.850359",
-            "Bridge": 0.562,
-            "SP": 0.774,
-            "SV": 0.707,
-            "ST": 0.866,
-            "SBF": 0.554,
-            "created_date": "2018-09-16 03:25:42.850359",
-            "Ship": 0.836
-        },
-        {
             "BD": 0.797,
             "mAP": 0.738,
             "BC": 0.803,
