@@ -30,3 +30,31 @@ th {text-align: center;}
     color:red;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* EXTERNAL ------------------------------------ */
+
+.external-container {
+    margin-top:30px;
+    margin-bottom:40px;
+  }
+  .external-container-lf {
+    vertical-align:top;
+    display:table-cell;
+    padding-top:6px;
+    width:23%;
+    cursor:pointer;
+  }
+  .external-container-rt {
+    font-size:28px;
+    font-weight:300;
+    vertical-align:top;
+    display:table-cell;
+    padding-left:25px;
+  }
+  .external-image {
+    width:100%;
+    max-height:300px;
+  }
+  .fontBig {
+    font-size:16px;
+    font-weight:300;
+  }
