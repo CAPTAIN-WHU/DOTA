@@ -3719,19 +3719,6 @@
             "SBF": 0.0941,
             "created_date": "2019-08-12 16:26:45.261322",
             "Ship": 0.5238
-        },
-        {
-            "BD": 0.242,
-            "mAP": 0.301,
-            "BC": 0.252,
-            "HC": 0.123,
-            "TeamNames": "vbzhe",
-            "LV": 0.168,
-            "Harbor": 0.465,
-            "Plane": 0.504,
-            "RA": 0.14,
-            "TC": 0.537,
-            "TeamMembers": "Zhubin, Zhanghongwei, Maqi, Zhangyang",
-            "description": "An improved SSD version.",
-            "GTF": 0.082,
-            "Ins
+        }
+    ]
+}
