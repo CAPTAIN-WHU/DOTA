@@ -6,9 +6,10 @@
 	<title>DOTA</title>
 	<!-- <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">    	
-	<link rel="stylesheet" type="text/css" href="css/mystyle.css"
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<!-- <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	
 	<style>
@@ -24,22 +25,20 @@
 		
 		<div class="row">
 			<div class="span12">
-				<div class="hero-unit">
-					<h1 style="text-align:center; margin-top:60px; font-weight: bold">
-						DOTA: A Large-scale Dataset for Object Detection in Aerial Images
-					</h1>
-					<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px">
-						<a href="http://captain.whu.edu.cn/xia_En.html">Gui-Song Xia</a>,
-						<a href="http://mclab.eic.hust.edu.cn/~xbai/">Xiang Bai</a>, 
-						<a href="http://captain.whu.edu.cn/dingjian.html">Jian Ding</a>, 
-						<a href="">Zhen Zhu</a>, 
-						<a href="http://vision.cornell.edu/se3/people/serge-belongie/">Serge Belongie</a>, <br>
-						<a href="http://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>, 
-						<a href="http://www.dlr.de/caf/en/desktopdefault.aspx/tabid-5242/8788_read-933/sortby-lastname/">Mihai Datcu</a>, 
-						<a href="http://www.dsi.unive.it/~pelillo/">Marcello Pelillo</a>, 
-						<a href="http://www.lmars.whu.edu.cn/prof_web/zhangliangpei/rs/xueshu.htm">Liangpei Zhang</a>. 
-					</p>
-				</div>				
+					<div id="page-heading" class="jumbotron" style="margin-left: 0px; margin-right: 0px;">
+							<!-- <div class="content"> -->
+							<div id="heading-text" class="container">
+								<!-- <h1 style="text-align:center; margin-top:60px; font-weight: bold;font-size:50">
+									<strong style="color:red;text-shadow: 0 0 2px black;">DOTA 2</strong> 
+								</h1> -->
+								<p class="big-text" style="">
+									<span class="lamem-text" style="margin-right: 2px;font-size: 60px">DOTA</span>
+								</p>
+								<p style="font-size: 31px;font-family: 'Arial Narrow'">
+									<strong>A Large-Scale Benchmark and Challenges for Object Detection in Aerial Images</strong>
+								</p>
+							</div>
+						</div>			
 				<div class="row">
 					<div class="span4">
 					</div>
@@ -52,9 +51,6 @@
 							<li>
 								<a href="dataset.html">Dataset</a>
 							</li>
-							<li>
-								<a href="external.html">External</a>
-                            </li>  
 							<li class="active">
 							<!-- <li> -->
 								<a href="tasks.html">Tasks</a>
@@ -63,10 +59,22 @@
 								<a href="evaluation.html">Evaluation</a>
 							</li>
 							
-							<li>
-								<a href="results.html">Results</a>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Results <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="results.html"> <i class="glyphicon glyphicon-th-list"></i>  DOTA-v1.0</a></li>
+									<li><a href="results_dota15.html"> <i class="glyphicon glyphicon-th-list"></i>  DOTA-v1.5</a></li>
+									<li><a href="results_dota2.html"> <i class="glyphicon glyphicon-th-list"></i>  DOTA-v2.0</a></li>
+								</ul>
 							</li>
-							
+							<li>
+								<a href="people.html">People</a>
+							</li>
+							<li>
+								<a href="external.html">External</a>
+                            </li>
 							<br />
 							
 						</ul>
@@ -79,16 +87,14 @@
 					Overview
 				</h2>
 				<p>
-					We propose two detection tasks. Task1 uses the initial annotation as ground truth.
-					Task2 uses the generated axis-aligned bounding boxes as ground truth.
-					The results from task2 are of great practical value. 
-					We recommond you to test your algorithms by way of Task1. 
+					We introduce two detection tasks. Task1 uses the initial oriented bounding boxes (OBB) as ground truth.
+					Task2 uses the generated HBB as ground truth.
+					Task1 has more practical value and we recommond you to test your algorithms in Task1.
 				</p>
 
 				<h2>Task1 - Detection with oriented bounding boxes <strong>(Recommended)</strong> </h2>
 				<p>
-					The aim of this task is to locate the ground object instances with an oriented bounding box. The
-					oriented bounding box follows the same format with the original annotation
+					The aim of this task is to locate the ground object instances with an OBB.
 				</p>
 
 				<!-- <h3>
@@ -103,8 +109,8 @@
 					Submission Format
 				</h3>
 				<p>
-					You will be asked to submit a zip file containing results for all test images to evaluate your results. The results are stored 
-					in 15 files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category.  
+					You need to submit a zip file containing results for all test images for evaluation. The results are stored
+					in n (n is the numer of categories) files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>, each file contains all the detections for a specific category.
 					Each file is in the following format:
 
 				</p>
@@ -116,7 +122,7 @@ imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</s
 					</code>
 				</pre>
 
-				<a href="submissionformat/example_task1.zip">An example submission of task1</a>
+				<a href="submissionformat/example_task1.zip", style="font-size: 16px">An example submission of task1 for DOTA-v1.0</a>
 
 				<h3>
 					Evaluation Protocol
@@ -134,7 +140,7 @@ imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</s
 					Detecting object with horizontal bounding boxes is usual in many previous contests for object
 					detection. The aim of this task is to accurately localize the instance in terms of horizontal bounding
 					box with (xmin, ymin, xmax, ymax) format. In the task, the ground truths for training and testing are generated
-					by calculating the axis-aligned bounding boxes over original annotated bounding boxes.
+					by calculating the horizontal bounding boxes over original annotated bounding boxes.
 				</p>
 				<p>
 
@@ -152,8 +158,8 @@ imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</s
 					Submission Format
 				</h3>
 				<p>
-					You will be asked to submit a zip file containing results for all test images to evaluate your results. The results are stored 
-					in 15 files, <strong style="color:blue">"Task2_plane.txt, Task2_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category.  
+					You need to submit a zip file containing results for all test images for evaluation. The results are stored
+					in n (n is the numer of categories) files, <strong style="color:blue">"Task2_plane.txt, Task2_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category.  
 				</p>
 				<pre>
 					<code style="font-size:16px">
@@ -162,14 +168,14 @@ imgname score xmin ymin xmax ymax
 ... 
 					</code>
 				</pre>
-				<a href="submissionformat/example_task2.zip">An example submission of task2</a>
+				<a href="submissionformat/example_task2.zip", style="font-size: 16px">An example submission of task2 for DOTA-v1.0</a>
 
 				<h3>
 					Evaluation Protocol
 				</h3>
 				<p>
 					The evaluation protocol for horizontal bounding boxes follows the PASCAL VOC benchmark,
-					which uses mean Average Precision(<strong>mAP</strong>) as the primary metric.
+					which uses mean Average Precision(<strong>mAP</strong>) as metric.
 				</p>
 
 
@@ -186,7 +192,7 @@ imgname score xmin ymin xmax ymax
 <!--		<p align="center">-->
 <!--			<a href="https://clustrmaps.com/site/1ayvp"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=Vs7kEm-F-yc_I1yR89KMrjHwPuM3LWsU-RKxnqEQh3s&cl=ffffff" /></a>-->
 <!--		</p>-->
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Vs7kEm-F-yc_I1yR89KMrjHwPuM3LWsU-RKxnqEQh3s'></script>
+	<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Vs7kEm-F-yc_I1yR89KMrjHwPuM3LWsU-RKxnqEQh3s'></script>
 
 	<br>		
 	</div>

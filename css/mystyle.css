@@ -18,14 +18,63 @@ ol {font-size: 17px;}
  /* table{border: 2px solid #ddd} */
 th {text-align: center;}
 
- .jumbotron {
-    /* background: url('../images/background4.jpg'); */
+ /* .jumbotron {
+    background: url('../images/background.png');
     margin-top: 50px;
     margin-bottom: 20px;
-    /*min-height: 300px;*/
-    /* filter:alpha(opacity=60); */
-    /* opacity: 0.6; */
+    min-height: 300px;
+    filter:alpha(opacity=60);
+    opacity: 0.85;
+  }  */
+  
+  #page-heading {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    display: table;
   }
+  .jumbotron {
+    width: 100%;
+    background: url('../images/background2.png') repeat center center;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  #heading-text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  #heading-text > p {
+    color: #FFFFFF;
+    font-size: 1.8vw;
+  }
+  
+  #heading-text > p > a {
+    color: inherit;
+  }
+  
+  #heading-text > p.big-text {
+    font-family: 'Roboto Slab'; 
+    font-weight: 700; 
+    font-size: 5em;
+  }
+  
+  .lamem-text {
+    color: #A31F34;
+    text-shadow: 1px 1px #F7F7F7, -1px -1px 0 #F7F7F7, 1px -1px #F7F7F7, -1px 1px 0 #F7F7F7;
+  }
+
+  #heading-text > p.big-text {
+    font-size: 6vw;
+  }
+  .lamem-text {
+    color: #A31F34;
+    text-shadow: 2px 2px #F7F7F7, -2px -2px 0 #F7F7F7, 2px -2px #F7F7F7, -2px 2px 0 #F7F7F7;
+  }
+  
 .news{
     color:red;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
