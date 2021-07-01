@@ -94,6 +94,8 @@
 				</h2>
 				<p style="text-align:justify;">
 					The DOTA images are collected from the Google Earth, GF-2 and JL-1 satellite provided by the China Centre for Resources Satellite Data and Application, and aerial images provided by CycloMedia B.V.
+					DOTA consists of RGB images and grayscale images. The RGB images are from Google Earth and CycloMedia, while the grayscale images are from the panchromatic band of GF-2 and JL-1 satellite images.
+					All the images are stored in 'png' formats.
 				</p>
 				<p style="text-align:justify;">
 					Use of the Google Earth images must respect the
@@ -139,21 +141,37 @@
 						(c) center of a baseball diamond.
 				</p>
 				<p style="text-align:justify; font-size: 17px">
-					Apart from OBB, each instance is also labeled with a <strong>category</strong> and a <strong>difficult</strong> which indicates whether the instance is difficult to be detected(1
-					for difficult, 0 for not difficult). Annotations for an image are saved in a text file with the same file name. At the
-					first line, 'imagesource'(GoogleEarth, GF-2 or JL-1) is given. At the second line, ground sample distance <a href="https://en.wikipedia.org/wiki/Ground_sample_distance">(GSD)</a> in meters is given.
-					If the 'gsd' is missing, it is annotated to be 'null'. From third line to last line, annotation for each instance is given. The following is an example annotation for an image:
+					Apart from OBB, each instance is also labeled with a <strong>category</strong> and a <strong>difficult</strong> which indicates whether the instance is difficult to be detected (1
+					for difficult, 0 for not difficult). Annotations for an image are saved in a text file with the same file name.
+					Each line represent an instance. The following is an example annotation for an image:
 				</p>
 				<pre>
 <code style="font-size:16px;">
-'imagesource':imagesource
-'gsd':gsd
 x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
 x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
 ...
 </code>
 				</pre>
+				<h2>
+					Meta data
+				</h2>
+<!--				<p style="text-align:justify; font-size: 17px">-->
 
+<!--				</p>-->
+				<p>
+					The meta data of image acquisition dates, image source, and GSD are provided.
+					At the first line, 'acquisition dates' is given. At the second line, 'imagesource' (GoogleEarth, GF-2 or JL-1) is given.
+					At the third line, ground sample distance <a href="https://en.wikipedia.org/wiki/Ground_sample_distance">(GSD)</a> in meters is given.
+					If the 'acquisition dates' and 'gsd' are missing, they are annotated as 'None'.
+
+				</p>
+						<pre>
+<code style="font-size:16px;">
+'acquisition dates':acquisition dates
+'imagesource':imagesource
+'gsd':gsd
+</code>
+				</pre>
 <!--<pre>-->
 <!--<code style="font-size:16px;">-->
 <!--'imagesource':imagesource<br>-->
